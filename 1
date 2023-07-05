@@ -1,0 +1,4 @@
+STAKE=NEW_STAKE
+sed -i.bak -e "s/initialStake .*/initialStake $STAKE/" /etc/systemd/system/moonbeamd.service
+systemctl daemon-reload
+systemctl restart moonbeamd 
